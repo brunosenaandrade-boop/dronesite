@@ -1,0 +1,13 @@
+{
+  "name": "drone-site",
+  "version": "1.0.0",
+  "description": "Site de serviços de imagem aérea com drone - Tubarão/SC",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "bcryptjs": "^2.4.3"
+  }
+}

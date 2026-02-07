@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Admin | DroneView</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Tela de Login -->
+  <div class="admin-body" id="loginSection">
+    <div class="login-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48" style="color: var(--accent); margin-bottom: 16px;">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+        <path d="M7 11V7a5 5 0 0110 0v4"/>
+      </svg>
+      <h1>Painel Admin</h1>
+      <p>Digite a senha para acessar os leads</p>
+      <div id="loginError" class="login-error">Senha incorreta</div>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="Digite a senha" required autofocus>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Entrar</button>
+      </form>
+      <a href="/" style="display: inline-block; margin-top: 20px; color: var(--text-muted); font-size: 0.85rem;">Voltar ao site</a>
+    </div>
+  </div>
+
+  <!-- Painel de Leads -->
+  <div class="admin-panel" id="panelSection" style="display: none;">
+    <div class="admin-header">
+      <div>
+        <h1>Leads Recebidos</h1>
+        <p class="leads-count" id="leadsCount">Carregando...</p>
+      </div>
+      <div class="admin-actions">
+        <button class="btn btn-outline btn-sm" id="btnRefresh">
+          Atualizar
+        </button>
+        <button class="btn btn-outline btn-sm" id="btnExport">
+          Exportar CSV
+        </button>
+        <button class="btn btn-danger btn-sm" id="btnLogout">
+          Sair
+        </button>
+      </div>
+    </div>
+
+    <div id="leadsContainer"></div>
+  </div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>
