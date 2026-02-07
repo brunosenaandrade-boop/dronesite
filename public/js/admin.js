@@ -181,7 +181,7 @@ function exportCSV() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `leads_droneview_${new Date().toISOString().slice(0, 10)}.csv`;
+      a.download = `leads_droneclique_${new Date().toISOString().slice(0, 10)}.csv`;
       a.click();
       URL.revokeObjectURL(url);
     })
